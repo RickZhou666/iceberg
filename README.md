@@ -95,3 +95,52 @@ Iceberg documentation: https://iceberg.apache.org/docs/nightly/
 <br><br><br>
 
 ## 2. what is iceberg used for?
+
+1. what is data warehouses?
+
+<img src="./img/Xnip2025-03-19_21-42-37.jpg" width="50%" />
+
+
+- Introduction to Data Warehouses
+    - Definition and role as a centralized repository optimized for analytics and business intelligence.
+
+-  Centralization and Organization
+    - Goal of having a well-maintained, organized, and centralized data warehouse that stores most of
+an organization’s data.
+
+- Challenges with Structuring Data
+    - The complex, messy task of structuring data to fit within a warehouse.
+    - Issues arising from the ETL process: data duplication, delays in data availability, and reduced operational flexibility.
+
+- Maintenance Costs and Challenges
+    - Ongoing, expensive, and labor-intensive efforts required to maintain a data warehouse.
+    - Consequences of inadequate maintenance: reduced data accessibility or a completely ineffective system.
+
+- Evolving Needs and Limitations
+    - Persistent challenges with cost, scalability, and maintenance that prompt the need for innovative solutions like Iceberg.
+
+
+<br><br>
+
+2. what is data lake?
+
+<img src="./img/Xnip2025-03-19_22-32-43.jpg" width="50%" />
+
+- the Concept of a Data Lake
+    - Explanation of data lakes storing data in its native format, avoiding rigorous structuring and massive ETL workloads.
+    - Highlight the cost reduction and simplification of the data management stack.
+
+- Advantages and Simplification
+    - Discussion of the operational streamlining promised by data lakes.
+    - Transition: While appealing, this simplicity introduces significant challenges.
+
+- Challenges of Data Lakes
+    - Detailed look at the complexities of extracting information from unstructured data.
+    - Impact on data scientists and analysts due to advanced requirements for data querying and management.
+    - The evolution of data management challenges over time, leading to potential inefficiencies and data
+bogs.
+
+- A Thoughtful Consideration
+    - Introduction to the idea of hybrid solutions like data lakehouses.
+    - A proposed solution that blends the flexibility of data lakes with the structured benefits of data
+warehouses.
