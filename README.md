@@ -126,6 +126,7 @@ an organization’s data.
 
 <img src="./img/Xnip2025-03-19_22-32-43.jpg" width="50%" />
 
+
 - the Concept of a Data Lake
     - Explanation of data lakes storing data in its native format, avoiding rigorous structuring and massive ETL workloads.
     - Highlight the cost reduction and simplification of the data management stack.
@@ -144,3 +145,23 @@ bogs.
     - Introduction to the idea of hybrid solutions like data lakehouses.
     - A proposed solution that blends the flexibility of data lakes with the structured benefits of data
 warehouses.
+
+<br><br>
+
+3. Exploring data lakehouses
+    - <img src="./img/Xnip2025-03-31_22-33-35.jpg" width="50%" />
+    - <img src="./img/Xnip2025-03-31_22-37-38.jpg" width="50%" />
+
+<br><br>
+
+4. iceberg table format
+    - <img src="./img/Xnip2025-03-31_22-39-48.jpg" width="50%" />
+    - <img src="./img/Xnip2025-03-31_22-41-11.jpg" width="50%" />
+
+    - apache iceberg explained
+        - <img src="./img/Xnip2025-03-31_22-42-50.jpg" width="50%" />
+        - <img src="./img/Xnip2025-03-31_22-44-46.jpg" width="50%" />
+
+
+
+
