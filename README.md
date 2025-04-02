@@ -84,7 +84,7 @@ practice of iceberg
 # [Udemy Course](https://www.udemy.com/course/getting-started-apache-iceberg/learn/lecture/45702165#overview)
 
 
-## 1. intro
+# 1. intro
 
 <img src="./img/Xnip2025-03-19_21-34-08.jpg" width="50%" />
 
@@ -94,7 +94,7 @@ Iceberg documentation: https://iceberg.apache.org/docs/nightly/
 
 <br><br><br>
 
-## 2. what is iceberg used for?
+# 2. what is iceberg used for?
 
 1. what is data warehouses?
 
@@ -162,6 +162,81 @@ warehouses.
         - <img src="./img/Xnip2025-03-31_22-42-50.jpg" width="50%" />
         - <img src="./img/Xnip2025-03-31_22-44-46.jpg" width="50%" />
 
+
+
+
+<br><br><br>
+
+# 3. Apache Iceberg Technical Architecture
+
+1. Understanding Apache Iceberg Core Concepts
+    - <img src="./img/Xnip2025-04-01_21-43-33.jpg" width="50%" />
+
+
+2. Iceberg Architecture
+    - Catalog
+        - point to table current metadata file
+        - any add, delete modify to the data, write a new metadata file
+        - update pointer to new metadata file
+    - <img src="./img/Xnip2025-04-01_21-57-31.jpg" width="50%" />
+
+
+3. Iceberg key benefits
+    - ensure the data integrity
+    - <img src="./img/Xnip2025-04-01_22-07-04.jpg" width="50%" />
+
+
+4. Apache Iceberg Demonstration
+```bash
+CREATE TABLE aircraft (
+    tail_number varchart(15),
+    description varchart(150),
+    class varchar(50),
+    year integer
+) WITH (
+    type = 'iceberg'
+)
+```
+- <img src="./img/Xnip2025-04-01_22-11-43.jpg" width="50%" />
+
+    - Iceberg structure
+        - after table creation
+            - <img src="./img/Xnip2025-04-01_22-14-55.jpg" width="50%" />
+        - metadata folder
+            - <img src="./img/Xnip2025-04-01_22-15-43.jpg" width="50%" />
+        - json file - metadata snapshot file, avro file - manifest list file
+            - <img src="./img/Xnip2025-04-01_22-18-20.jpg" width="50%" />
+
+
+5. Inserting records into iceberg table
+```bash
+INSERT INTO 
+    aircraft (tail_number, description, class, year)
+VALUES
+    ('N12345', 'Boeing 737-800', 'Economy', 2010),
+    ('N12346', 'Boeing 737-800', 'Jet', 1983),    
+```
+- <img src="./img/Xnip2025-04-01_22-29-51.jpg" width="50%" />
+- data generated
+    - <img src="./img/Xnip2025-04-01_22-37-04.jpg" width="50%" />
+- metadata file updated
+    - <img src="./img/Xnip2025-04-01_22-35-36.jpg" width="50%" />
+
+
+6. Apache Iceberg Integration and Compatibility
+    - <img src="./img/Xnip2025-04-01_22-39-38.jpg" width="50%" />
+    - <img src="./img/Xnip2025-04-01_22-43-15.jpg" width="50%" />
+
+
+7. Data Lake Compatibility
+    - <img src="./img/Xnip2025-04-01_22-47-30.jpg" width="50%" />
+
+
+- ACID
+    - Atomicity, A transaction is treated as a single, indivisible unit of work. Either all operations within the transaction succeed, or none of them do, ensuring that the database remains in a consistent state. 
+    - Consistency, Transactions must bring the database from one valid state to another, maintaining data integrity and adhering to predefined rules and constraints. 
+    - Isolation, Concurrent transactions should appear to execute independently of each other, as if they were running sequentially, preventing interference and ensuring data accuracy. 
+    - Durability, Once a transaction is committed, its changes are permanently stored and will persist even in the event of system failures or crashes. 
 
 
 
